@@ -1,5 +1,5 @@
 def get_inc_weight(yrs):
-    return 120
+    return 12
 
 if __name__ == '__main__':
     print "Welcome to Calorite!"
