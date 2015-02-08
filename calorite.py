@@ -9,7 +9,7 @@ class question(object):
         return self.q   
 
 def getIncWeightPerDay():
-    return 0.15
+    return 0.015
 
 def getIncWeight(yrs):
     return getIncWeightPerDay()*yrs*365
