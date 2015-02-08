@@ -1,5 +1,18 @@
-def get_inc_weight(yrs):
-    return 12
+class question(object):
+    def __init__(self):
+        self.q = ""
+    def setQuestion(self,ques):
+        self.q=ques
+    def getQuestion(self):
+        return self.q
+    def __str__(self):
+        return self.q   
+
+def getIncWeightPerDay():
+    return 0.15
+
+def getIncWeight(yrs):
+    return getIncWeightPerDay()*yrs*365
 
 if __name__ == '__main__':
     print "Welcome to Calorite!"
@@ -13,7 +26,7 @@ if __name__ == '__main__':
     ##yrs: time in years to get from user
     yrs = float(raw_input("Cool! Now enter the time from now(in yrs) to check your weight: "))
     inc_weight = 0 ##setting incremented weight to zero
-    inc_weight = get_inc_weight(yrs) ## getting weight increment/decrement parameters from user and then calculating incremented/decremented weight 
+    inc_weight = getIncWeight(yrs) ## getting weight increment/decrement parameters from user and then calculating incremented/decremented weight 
     print
     print "Alright! After all analysis, "
     print "we found that your weight after %0.2f years will be %0.2f kgs." % (yrs, inc_weight+cur_weight)
